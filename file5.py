@@ -87,8 +87,12 @@ a = b = c = 0
 print(a, b, c)
 #Create temp = 100, print it, delete it using del, then try to print again and observe the error.
 temp = 100
-print("Before delete:", temp)
+print(temp)
 del temp
+try:
+    print(temp) 
+except NameError as e:
+    print("Error:", e)
 #Create a string using triple single quotes: "Helo" Print it.
 single_quote_str = '''Hello'''
 print(single_quote_str)
