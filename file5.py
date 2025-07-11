@@ -1,127 +1,78 @@
-#Create two variables a=10 and b=3.Perform print: addition(+), subtraction(-), multiplication(x), division(/), modulus(%), exponentiation(), and floor division(//).**
-a = 10 
-b = 3
-print("Addition:", a + b)
-print("Subtraction:", a - b)
-print("Multiplication:", a * b)
-print("Division:", a / b)
-print("Modulus:", a % b)
-print("Exponentiation:", a ** b)
-print("Floor Divsion:", a // b)
-#Compare a and b using comparison operators: ==, !=, >, <, >=, <=. Print the result of each comparison.
-a
-b
-print("Equal:", a == b)
-print("Not Equal:", a != b)
-print("Greater Than:", a > b)
-print("Less Than:", a < b)
-print("Greate Than or Equal:", a >= b)
-print("Less Than or Equal:", a <= b)
-#Create two boolean variables: x=True, y=False. Perform and print results of: x and y, x or y, x not y.
-x = True
-y = False
-print("x and y:", x and y)
-print("x or y:", x or y)
-print("not x:", not x)
-#Create num + 5 and perforn assignment operations: +=, -=, *=, /=, %=, **=, //=. Print the result after each operation.
-num = 5
-num += 1
-print("After += : ", num)
-num -= 2
-print("After -= :", num)
-num *= 3
-print("After *= :", num)
-num /= 2
-print("After /= :", num)
-num %= 4
-print("After %= :", num)
-num **= 2
-print("After **= :", num)
-num //= 3
-print("After //= :", num)
-#Create m = 100, n = 100 Check if they are the same object using is and is not, and print the result.
-m = 100
-n = 100
-print("m is n:", m is n)
-print("m is not n:", m is not n)
-#Create a string text = "Python Programming" Check if "Python" is in text and if "Java" is not in text.
-text = "Python Programming"
-print("Python" in text)
-print("Java" not in text)
-#Write a Python program to print all keywords using the keyword module.
-import keyword
-print("Python keywords:", keyword.kwlist)
-#Declare: name = "Ali", age = 20, height = 5.9, Print their values and data types using the type() function.
-name = "Ali"
-age = 20
-height = 5.9
-print(name, type(name))
-print(age, type(age) )
-print(height, type(height))
-#Write 5 valid variable names (e.g, user_name, x1, _value, TotalAmount, data123). Also write 3 invalid ones (as comments): 1name, user-name, class. Explain why invalid names are not allowed.
-user_name_valid = "Rafia"
-x1_valid= 1
-_value_valid = 10
-TotalAmount_valid = 500
-data123_valid = "done"
-#1name = "error"
-#user_name = "error"
-#class = "error"
-print(user_name_valid)
-print(x1_valid) 
-print(_value_valid) 
-print(TotalAmount_valid)
-print(data123_valid)
-#Create special-naming variables: _hidden = 5, __private = 10, MAX_SIZE = 100. Print their values.
-_hidden = 5
-__private = 10
-MAX_SIZE = 100
-print(_hidden) 
-print(__private) 
-print(MAX_SIZE )
-#Assign values in one line: x = 1, y = 2, z = 3. Print them.
-x, y, z, = 1, 2, 3
-print(x, y, z)
-#Assign same value 0 to a, b, c in one line. Print them.
-a = b = c = 0
-print(a, b, c)
-#Create temp = 100, print it, delete it using del, then try to print again and observe the error.
-temp = 100
-print(temp)
-del temp
-try:
-    print(temp) 
-except NameError as e:
-    print("Error:", e)
-#Create a string using triple single quotes: "Helo" Print it.
-single_quote_str = '''Hello'''
-print(single_quote_str)
-#**Create a multi-line string using triple duoble quotes: """This is line one./nThis is line two. """ Print it.**
-multi_line = """This is line one./nThis is line two."""
-print(multi_line)
-#**use type() to check and print the data types of: An integer, A float, A string, A boolean.**
-num = 10
-print("Value:", num, "Type:", type(num))
-a = 3.14
-print("Value:", a, "Type:", type(a))
-name = "Rafia"
-print("Value:", name, "Type:", type(name))
-is_active = True
-print("Value:", is_active, "Type:", type(is_active)) 
-#Create score = 85 Check: score > 50 and score < 100. Print the result.
-score = 85
-result = score > 50 and score < 100
-print(result)
-#Create message = "Welcome to Python" Use in and not in to check for word "Python" Print the result.
-message = "Welcome to Puython"
-print("Python" in message)
-print("java" not in message)
-#Write a code block using only comments that explains what your program does.
-# This program demonstrates:
-# - string operation
-# - variable assignments
-# - type checking 
-# - logical & membership operations
-#Create data = 123 Use id(data) to print its memory address.
-data = 123
-print("Memory address of data:", id(data))
+#Write a program that checks if a number is positive or negative. If it is zero, print "Zero."
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive number:")
+elif num < 0:
+    print("Negative number:")
+else:
+    print("Zero")
+#Input a number from the user and print whether it is even or odd.
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even number:")
+else:
+    print("Odd number:")
+# Ask the user to enter their age. If age is 18 or above, print "Eligible to vote." Else, print "Not eligible."
+age = int(input("Enter a age: "))
+if age >= 18:
+    print("Eligible to vote:")
+else:
+    print("Not eligible:")
+#Enter a number and check whether it is divisible by: 3, 5, Both. Print an appropriate message.
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 5 == 0:
+     print("Divisible by both 3 and 5:")
+elif num % 3 == 0:
+    print("Divisible by 3:")
+elif num % 5 == 0:
+    print("Divisible by 5:")
+else:
+    print("Not divisible by 3 or 5:")
+#**Ask for a student's marks and assign a grade: 90+ "A+",80+ "A",, 70+ "B" Otherwise "Fail".
+marks = int(input("Enter your marks: "))
+if marks >= 90:
+    print("Grade: A+")
+elif marks >= 80:
+    print("Grade: A")
+elif marks >= 70:
+    print("Grade: B")
+else:
+    print("Grade: Fail")
+#**Take a temperature input: Above 40 "Too Hot", Below 10 "Too cold" Otherwise "Moderate weather"**.
+temp = float(input("Enter temperature: "))
+if temp > 40:
+    print("Too Hot:")
+elif temp < 10:
+    print("Too cold:")
+else:
+    print("Moderate weather:")
+#Ask the user to enter a year. Check whether it is a leap yaer or not.
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year:")
+else:
+    print("Not a leap year:")
+#Input three numbers and print the largest one.
+a= int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a >= b and a >= c:
+    print("Largest:", a)
+elif b >= a and b>= c:
+    print("Largest:", b)
+else:
+    print("Largest:", c)
+#Ask the user to enter a password. If password matches "admin123" print "Access granted", Else "Access denied".
+password = input("Enter password: ")
+if password == "admin123":
+    print("Access grainted: ")
+else:
+    print("Access denied: ")
+#**Take an integer input. If number > 0, check if it's less than 100. Print appropriate messages for both checks*.
+num = int(input("Enter an integer: "))
+if num > 0:
+    print("Positive number: ")
+if num < 100:
+    print("Number is 100 or greater: ")
+else:
+    print("Number is zero or negative: ")
